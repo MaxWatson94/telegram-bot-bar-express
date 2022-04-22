@@ -34,7 +34,7 @@ def sizeStep(message, user_data):
 
 def barLabels(message, user_data):
     user_data['labels'] = message.text
-    msg = bot.send_message(message.chat.id, 'Введите данные для ваших столбов через запятую. В том-же порядке, что и ваши названия столбцов\n' + user_data['labels'])
+    msg = bot.send_message(message.chat.id, 'Введите данные(только числа) для ваших столбцов через запятую. В том-же порядке, что и ваши названия столбцов\n' + user_data['labels'])
     bot.register_next_step_handler(msg, barData, user_data)
 
 
